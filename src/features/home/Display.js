@@ -8,7 +8,7 @@ const Display = () => {
     </div>
     <div>
       <h1 className='text-pink-500'>Hi, im Babuskaa!</h1>
-      <p className='text-white'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab delectus animi repellendus esse consectetur veritatis omnis impedit laborum, dolor, quibusdam itaque quidem commodi dolorum sunt beatae sit enim totam blanditiis!</p>
+      <p className='text-white'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab delectus animi repellendus esse consectetur veritatis omnis impedit laborum, dolor, quibusdam itaque quidem commodi dolorum sunt beatae sit enim totam blanditiisss!</p>
     </div>
     </div>
   )
