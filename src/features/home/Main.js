@@ -1,11 +1,8 @@
 import React from 'react'
-import Display from './Display'
 
 const Main = () => {
   return (
-    <div>
-      <Display/>
-    </div>
+    <div>Main</div>
   )
 }
 
