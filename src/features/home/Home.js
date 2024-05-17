@@ -1,12 +1,12 @@
-import React from 'react'
-import { Outlet } from 'react-router'
+import React from "react";
+import CardCompo from "../shared/CardComp";
 
 const Home = () => {
   return (
     <div>
-      <Outlet />
+      <h1>HOME PAGE!</h1>
     </div>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;

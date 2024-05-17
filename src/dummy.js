@@ -25,3 +25,4 @@ const App = () => {
   person.setBalance(90000);
 
   console.log(person.getBalance());
+};
