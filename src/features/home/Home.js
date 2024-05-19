@@ -9,7 +9,8 @@ const Home = () => {
 
         {product.map((product) => {
           return (
-            <div key={product.id} className="cursor-pointer">
+            <div key={product.id} className="m-4 cursor-pointer">
+
               <span>{product.brand}</span>
               <h1>{product.title}</h1>
               <span>{product.category}</span>

@@ -6,8 +6,9 @@ const NotFound = () => {
   return (
     <div>
       <h1>Page Not Found!!!</h1>
-      <button onClick={()=>{na}}>Go Back</button>
+      <button onClick={() => { nav }}>Go Back</button>
     </div>
-  )};
+  )
+};
 
 export default NotFound;
