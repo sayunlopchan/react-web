@@ -1,6 +1,6 @@
 import React from "react";
 import { useParams } from "react-router";
-import { products } from "../../dummy/data";
+import { products } from "../../../dummy/data";
 
 const DetailPage = () => {
   const { id } = useParams();

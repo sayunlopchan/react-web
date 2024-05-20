@@ -28,11 +28,6 @@ const Header = () => {
         >
           Service
         </NavLink>
-        {/* <button
-          className="p-1 text-black text-sm rounded-xl bg-blue-300 "
-        >
-          Dark
-        </button> */}
       </nav>
     </div>
   );

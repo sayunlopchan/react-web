@@ -1,0 +1,59 @@
+import { useFormik } from "formik";
+import React, { useState } from "react";
+const Home = () => {
+  const [count, setCount] = useState(0);
+
+  const handleIncre = () => {
+    setCount((prev) => count + 1); //with parameter or without
+  };
+  const handleDecre = () => {
+    setCount(count - 1); // direct
+  };
+
+  const formik = useFormik({
+    initialValues: {
+      post: "", // name="post" from input
+    },
+    onSubmit: (e) => {
+      //attached from Form
+      console.log(e); // clg e = input value
+    },
+  });
+
+
+
+
+  return (
+    <div className="m-4 space-y-9">
+      {/* useState */}
+      <div>
+        <button className="p-2 bg-green-500" onClick={handleIncre}>
+          Increment
+        </button>
+        <h1>Count: {count}</h1>
+        <button className="p-2 bg-red-500" onClick={handleDecre}>
+          Decrement
+        </button>
+      </div>
+
+      {/* form  //FORMIK liabary // npm i formik*/}
+      <form onSubmit={formik.handleSubmit}>
+        <div>
+          <label htmlFor="">ADD Info</label>
+          <br />
+          <input
+            onChange={formik.handleChange}
+            className="bg-gray-300 p-2"
+            type="text"
+            placeholder="post add"
+            name="post"
+          />
+        </div>
+
+        <button type="submit">submit</button>
+      </form>
+    </div>
+  );
+};
+
+export default Home;
