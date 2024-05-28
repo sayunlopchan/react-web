@@ -5,7 +5,7 @@ import { NavLink } from "react-router-dom";
 const Header = () => {
 
   return (
-    <div className="bg-gray-900 text-white flex justify-between items-center h-[46px] ">
+    <div className="bg-gray-900 text-white flex justify-between items-center h-[46px] w-full top-0 sticky">
       <h1 className="text-2xl px-2">
         <NavLink>TailReact</NavLink>
       </h1>

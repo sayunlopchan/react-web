@@ -1,57 +1,45 @@
-import axios from "axios";
-import React, { useState, useEffect } from "react";
+// import React, { useCallback, useState } from 'react'
+// import Child from './Child';
+
+// const Home = () => {
+//   const [count, setCount] = useState(0);
+
+//   const hands = useCallback(() => {
+//     console.log('hello childdddd')
+//   }, [])
+
+
+//   return (
+//     <div>
+//       <h1>{count}</h1>
+//       <button onClick={() => setCount(count + 1)}>increment</button>
+//       <Child label='child' hands={hands} />
+//     </div>
+//   )
+// }
+
+// export default Home
+
+
+
+//___________________________________________Clean up function_____ 
+import React, { useState } from 'react'
+import Child from './Child';
 
 const Home = () => {
-  // axios npm: npm i axios
-
-  const [data, setData] = useState([]);
-
-  // then catch
-  const getData = () => {
-    axios
-      .get("https://dummyjson.com/products")
-      .then((res) => {
-        setData = res.data.products;
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-  };
-
-  const thenCatch = () => {
-    axios
-      .get("url")
-      .then((response) => {})
-      .catch((error) => {
-        console.log(error);
-      });
-  };
-
-  // async await
-  const tryCatch = async () => {
-    try {
-      const res = await axios.get("https://dummyjson.com/products");
-      setData(res.data?.products);
-    } catch (err) {
-      console.log(err);
-    }
-  };
-
-  useEffect(() => {
-    tryCatch();
-  }, []);
+  const [show, setShow] = useState(true);
 
   return (
     <div>
-      {data.map((product) => {
-        return (
-          <div key={product.id}>
-            <h1>{product.title}</h1>
-          </div>
-        );
-      })}
-    </div>
-  );
-};
+      {/* onClick fun call => setShow update show value which is => !show = false => true  */}
 
-export default Home;
+      <button onClick={() => setShow(!show)}>Toggle</button>
+
+
+      {/* gets mount/unmount if show === true/false , cleanup*/}
+      {show && <Child />}
+    </div>
+  )
+}
+
+export default Home
